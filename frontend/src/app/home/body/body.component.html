@@ -1,0 +1,9 @@
+<div class="main">
+  <div class="left">
+    <app-left-column [user]="user"></app-left-column>
+  </div>
+  <div class="middle">
+    <app-post-factory [user]="user"></app-post-factory>
+    <app-post *ngFor="let post of posts" [post]="post"></app-post>
+  </div>
+</div>

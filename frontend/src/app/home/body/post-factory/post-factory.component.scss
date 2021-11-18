@@ -1,0 +1,34 @@
+.header-image {
+  background-size: cover;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.rendered {
+  padding: 2rem;
+}
+
+mat-card {
+  margin: 1rem;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  border-top: solid 1px #F0F2F5;
+
+  & > * {
+    flex: 1 1 auto;
+    color: rgb(101, 103, 107);
+  }
+
+  mat-icon {
+    margin: 0 0.2rem;
+  }
+}

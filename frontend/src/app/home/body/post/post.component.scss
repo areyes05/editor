@@ -1,0 +1,21 @@
+.header-image {
+  background-size: cover;
+}
+
+mat-card {
+  margin: 1rem;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: row;
+
+  & > * {
+    flex: 1 1 auto;
+    color: rgb(101, 103, 107);
+  }
+
+  mat-icon {
+    margin: 0 0.2rem;
+  }
+}

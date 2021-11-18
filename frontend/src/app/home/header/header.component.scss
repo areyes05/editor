@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.left, .right, {
+  flex: 1 1 auto;
+}
+
+.middle {
+  flex: 2 2 auto;
+  display: flex;
+  flex-direction: row;
+
+  button {
+    border-radius: 10%;
+    margin: 0.5rem 0;
+    flex: 1 1 auto;
+    color: #777;
+  }
+
+  button:hover {
+    background-color: #F0F2F5;
+  }
+
+  .active {
+    color: rgb(24, 119, 242);
+    border-bottom: solid 4px rgb(24, 119, 242);
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .active button {
+    color: rgb(24, 119, 242);
+  }
+
+  mat-icon {
+    font-size: 24pt;
+  }
+}

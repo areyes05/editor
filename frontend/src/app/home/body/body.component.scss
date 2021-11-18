@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  flex: 1 0 auto;
+  padding: 1rem;
+}
+
+.middle {
+  flex: 5 5 1400px;
+  max-width: 1400px;
+}
+
+

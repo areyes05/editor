@@ -1,0 +1,19 @@
+<mat-card class="left">
+  <mat-card-header>
+    <div class="header-image" mat-card-avatar>
+      <mat-icon>groups</mat-icon>
+    </div>
+    <mat-card-title>Posts</mat-card-title>
+    <mat-card-subtitle>{{posts.length}} Notes</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option (click)="onPostSelect(post)" *ngFor="let post of posts">
+        {{post.content.substr(0, 20)}}
+      </mat-list-option>
+      <mat-list-option (click)="deleteAllPosts()">
+        Delete All
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>

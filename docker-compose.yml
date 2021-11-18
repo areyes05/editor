@@ -1,0 +1,14 @@
+version: '3'
+services:
+  proxy:
+    build: .
+    container_name: pr
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend/dist/fb:/usr/share/nginx/html
+    depends_on:
+      - backend
+  backend:
+    build: backend
+    container_name: backend

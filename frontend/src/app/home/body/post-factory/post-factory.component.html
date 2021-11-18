@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-form-field appearance="fill" class="half-width">
+      <mat-label>What is on your mind, {{user.name}}?</mat-label>
+      <textarea [(ngModel)]="post.content" matInput placeholder="message" rows="10"></textarea>
+    </mat-form-field>
+    <div class="half-width rendered">
+      <app-markdown [text]="post.content"></app-markdown>
+    </div>
+  </mat-card-header>
+  <mat-card-actions>
+    <button (click)="savePost()" mat-button>
+      <mat-icon fontSet="material-icons-outlined">videocam</mat-icon>
+      Live Video
+    </button>
+    <button mat-button>
+      <mat-icon>photo_camera</mat-icon>
+      Photo
+    </button>
+    <button mat-button>
+      <mat-icon class="material-icons-outlined">emoji_emotions</mat-icon>
+      Feeling
+    </button>
+  </mat-card-actions>
+</mat-card>
