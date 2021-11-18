@@ -30,7 +30,7 @@ export class PostDataService {
 
   savePost(post: Post): Observable<Post> {
     return this._postRestService.savePost(post).pipe(map((post) => {
-
+      this.updatePosts();
       return post;
     }));
   }

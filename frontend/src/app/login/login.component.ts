@@ -23,10 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(): void {
-    this._httpClient.post<User>('/api/login', {username: this.username, password: this.password})
+    this._httpClient.post<User>('/login', {username: this.username, password: this.password})
       .subscribe((user: User) => {
         localStorage.setItem('userId', user.id);
-        console.log('logged in');
         window.location.href = '';
       });
   }

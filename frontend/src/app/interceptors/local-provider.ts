@@ -3,8 +3,7 @@ import {Observable} from 'rxjs';
 
 export class LocalProvider implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.warn(req.url, req);
-    let req2 = req.clone({
+    const req2 = req.clone({
       url: `http://localhost:3000${req.url}`
     });
     return next.handle(req2);
